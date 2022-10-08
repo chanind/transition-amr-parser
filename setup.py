@@ -4,7 +4,8 @@ VERSION = '0.5.2'
 
 # this is what usually goes on requirements.txt
 install_requires = [
-    'torch==1.10.1',
+    # more flexible torch version for easier installation on Colab
+    'torch >= 1.10.1, < 2.0.0',
     'torch-scatter==2.0.9',
     'tqdm',
     'fairseq==0.10.2',
@@ -17,10 +18,10 @@ install_requires = [
     'penman',
     # needs tools to be importable > 1.0.4
     'smatch',
-    # for debugging
-    'ipdb',
-    'line_profiler',
-    'pyinstrument'
+    # skipping debugging deps for easier install
+    # 'ipdb',
+    # 'line_profiler',
+    # 'pyinstrument'
 ]
 
 setup(
